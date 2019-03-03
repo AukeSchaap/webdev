@@ -1,25 +1,29 @@
 body {
+    display: grid;
+    gap: 40px 40px;
+    grid-template-columns: auto 219px 880px 219px auto;
+    grid-template-areas:
+        "header header header header header"
+        ". content content content .";
     margin: 0;
     font-family: Calibri, serif;
 }
 
 .navbar {
-    width: auto;
-    border: none;
-    display: block;
-    background-color: #f0f0f0;
+    grid-area: header;
     box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-columns: inherit;
+    gap: inherit;
+    background-color: #f0f0f0;
     font-family: "Calibri Light", serif;
-    margin-bottom: 20px;
 }
 
 .navbar-center {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1080px;
+    grid-column: 3;
 }
 
-.navbar a {
+.navbar-center a {
     display: inline-block;
     padding: 12px 16px;
     vertical-align: middle;
@@ -33,12 +37,43 @@ body {
 }
 
 .content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1080px;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: [left] 200px [middle] auto [right] 200px;
+    grid-template-areas:
+        "left middle right";
+    grid-template-rows: 300px auto;
+    gap: inherit;
+}
+
+.content > div {
     box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+    padding: 15px;
+}
+
+.content-left {
+    grid-area: left;
+    grid-row: span 2;
+    padding: 0 !important;
+}
+
+.content-left-picture {
+    background-image: url("../img/developer.jpg");
+    width: auto;
+    height: 230px
+}
+
+.content-left-container {
+    height: 100px;
+    padding: 15px;
 }
 
 .content-middle {
-    padding: 20px;
+    grid-area: middle;
+    grid-row: span 2;
 }
+
+.content-right {
+    grid-area: right;
+}
+
