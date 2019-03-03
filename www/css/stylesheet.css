@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Calibri, serif;
+}
+
+.navbar {
+    width: auto;
+    border: none;
+    display: block;
+    background-color: #f0f0f0;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+    font-family: "Calibri Light", serif;
+    margin-bottom: 20px;
+}
+
+.navbar-center {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 12px 16px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #505055;
+}
+
+.navbar a:hover {
+    background-color: white;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+}
+
+.content-middle {
+    padding: 20px;
+}
